@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light;
+  --bg: #fff9ef;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: #ffffff;
+  --text: #23170a;
+  --muted: #70553d;
+  --accent: #df7a13;
+  --accent-soft: #ffe2bf;
+  --border: rgba(111, 74, 34, 0.14);
+  --shadow: 0 24px 70px rgba(130, 82, 20, 0.12);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 188, 107, 0.45), transparent 30%),
+    linear-gradient(180deg, #fff7ea 0%, #fffdf8 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.domain-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.domain-shell__hero {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.domain-shell__hero h1,
+.stack h2,
+.card h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Georgia", serif;
+}
+
+.domain-shell__eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.domain-shell__description,
+.card p,
+.stack p {
+  color: var(--muted);
+}
+
+.domain-shell__meta,
+.domain-shell__nav,
+.list__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.domain-shell__meta {
+  margin-top: 1.5rem;
+}
+
+.domain-shell__meta span,
+.list__item span,
+.domain-shell__nav a {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+}
+
+.domain-shell__nav {
+  margin: 1.5rem 0 0;
+}
+
+.domain-shell__content,
+.stack {
+  margin-top: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.stack {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.list__item {
+  justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+  .domain-shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 1rem;
+  }
+
+  .domain-shell__hero,
+  .card,
+  .stack {
+    padding: 1.25rem;
+  }
+}
